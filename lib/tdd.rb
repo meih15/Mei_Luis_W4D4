@@ -42,3 +42,56 @@ def my_transpose(arr)
   new_arr
 
 end
+
+# [3,6,7,4,5]
+
+def stock_picker(arr)
+
+  # differences = []
+
+  # arr.each.with_index {|price, day|
+  #   arr[day..-1].each.with_index {|new_price, new_day|
+
+  #     if new_day > day
+  #     differences << [day, new_day, new_price-price]
+  #     end
+  #   }
+
+  # }
+
+  # profits = differences.map {|sub_arr| sub_arr[2]}
+  # max_profit = profits.max
+  # return [[]] if max_profit < 0
+
+  # max_profitss = differences.map {|sub_arr|
+
+  #   if sub_arr[2] == max_profit
+  #     [sub_arr[0], sub_arr[1]]
+  #   end
+
+  # }
+
+  # max_profitss.select {|ele| !ele.nil?}
+
+
+  hash = Hash.new {|h, k| h[k] = []}
+
+  arr.each.with_index do |price, day|
+    arr.each.with_index do |new_price, new_day|
+      if new_day > day
+        profit = new_price - price 
+        hash[profit] << [day, new_day]
+      end
+    end
+  end
+
+  sorted = hash.sort_by { |k, v| k }
+  largest_profit = sorted[-1][0]
+  if largest_profit < 0 
+    return [[]]
+  else
+    ssorted = sorted.select { |subArray| subArray[0] == largest_profit }
+    sssorted = ssorted.map {|arr| arr[1]}
+    return sssorted[0]
+  end
+end

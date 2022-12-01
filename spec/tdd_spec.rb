@@ -51,3 +51,18 @@ describe "my_transpose" do
   end
 
 end
+
+describe "#stock_picker" do
+
+  it 'returns the days that give the max profit' do
+    expect(stock_picker([3,6,7,4,5])).to eq([[0,2]])
+    expect(stock_picker([1,1,1])).to eq([[0,1], [0,2], [1,2]]) 
+  end
+
+  it 'Handles no profits' do
+    expect(stock_picker([6,5,4,3,2,1])).to eq([[]])
+  end
+
+
+
+end
