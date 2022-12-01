@@ -95,3 +95,18 @@ def stock_picker(arr)
     return sssorted[0]
   end
 end
+
+
+class TowersofHanoi 
+
+  attr_reader :stack1, :stack2, :stack3
+
+  def initialize
+    @stack1 = Array.new()
+    @stack2 = []
+    @stack3 = []
+  end
+
+
+
+end
