@@ -107,6 +107,19 @@ class TowersofHanoi
     @stack3 = []
   end
 
+  def play
+    while not_fixed
+    p 'Pick a pile and grab its disc'
+    input1 = gets.chomp.to_i
+    p 'Place the disc in new pile'
+    input2 = gets.chomp.to_i
 
+    
+
+      if won?
+        not_fixed = false
+      end
+    end
+  end
 
 end
