@@ -97,29 +97,29 @@ def stock_picker(arr)
 end
 
 
-class TowersofHanoi 
+# class TowersofHanoi 
 
-  attr_reader :stack1, :stack2, :stack3
+#   attr_reader :stack1, :stack2, :stack3
 
-  def initialize
-    @stack1 = Array.new()
-    @stack2 = []
-    @stack3 = []
-  end
+#   def initialize
+#     @stack1 = Array.new()
+#     @stack2 = []
+#     @stack3 = []
+#   end
 
-  def play
-    while not_fixed
-    p 'Pick a pile and grab its disc'
-    input1 = gets.chomp.to_i
-    p 'Place the disc in new pile'
-    input2 = gets.chomp.to_i
+#   def play
+#     while not_fixed
+#     p 'Pick a pile and grab its disc'
+#     input1 = gets.chomp.to_i
+#     p 'Place the disc in new pile'
+#     input2 = gets.chomp.to_i
 
     
 
-      if won?
-        not_fixed = false
-      end
-    end
-  end
+#       if won?
+#         not_fixed = false
+#       end
+#     end
+#   end
 
-end
+# end
